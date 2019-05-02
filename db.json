@@ -1,0 +1,18 @@
+{
+  "paymentInfo": [
+    {
+      "owner": "asef",
+      "cvv": "asfase",
+      "cardnumber": "asfasf",
+      "expiration_month": "01",
+      "expiration_year": "16"
+    },
+    {
+      "owner": "asefasd",
+      "cvv": "asdfasd",
+      "cardnumber": "fasdfadf",
+      "expiration_month": "01",
+      "expiration_year": "16"
+    }
+  ]
+}

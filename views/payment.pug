@@ -1,0 +1,140 @@
+
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+header#header
+  .container
+    .logo
+      a(href='https://www.crowdfundme.it', title='Benvenuto su CrowdFundMe', target='_self')
+        img(src='https://www.crowdfundme.it/wp-content/themes/crowdfundme/assets/img/logo-crowdfundme-h.png', alt='CrowdFundMe')
+    .menu-main-toggle
+      button(type='button')
+        .icon-bar-wrapper
+          span.icon-bar.fx-easeinout.fx-speed-normal
+          span.icon-bar.fx-easeinout.fx-speed-normal
+          span.icon-bar.fx-easeinout.fx-speed-normal
+
+
+.creditCardForm
+  .heading
+    h1 Confirm Purchase
+  .payment
+    form(action="/payment/validate" method="post")
+      .form-group.owner
+        label(for='owner') Owner
+        input#owner.form-control(type='text' name="owner")
+      .form-group.CVV
+        label(for='cvv') CVV
+        input#cvv.form-control(type='text' name="cvv")
+      #card-number-field.form-group
+        label(for='cardNumber') Card Number
+        input#cardNumber.form-control(type='text' name="cardnumber")
+      #expiration-date.form-group
+        label Expiration Date
+        select(name="expiration_month")
+          option(value='01') January
+          option(value='02') February 
+          option(value='03') March
+          option(value='04') April
+          option(value='05') May
+          option(value='06') June
+          option(value='07') July
+          option(value='08') August
+          option(value='09') September
+          option(value='10') October
+          option(value='11') November
+          option(value='12') December
+        select(name="expiration_year")
+          option(value='16')  2016
+          option(value='17')  2017
+          option(value='18')  2018
+          option(value='19')  2019
+          option(value='20')  2020
+          option(value='21')  2021
+      #credit_cards.form-group
+        img#visa(src='/images/visa.jpg')
+        img#mastercard(src='/images/mastercard.jpg')
+        img#amex(src='/images/amex.jpg')
+      #pay-now.form-group
+        button#confirm-purchase.btn.btn-default(type='submit') Confirm
+        
+        
+style.
+  .creditCardForm {
+      max-width: 700px;
+      background-color: #fff;
+      margin: 100px auto;
+      overflow: hidden;
+      padding: 25px;
+      color: #4c4e56;
+  }
+  .creditCardForm label {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+  .creditCardForm .heading h1 {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      color: #4c4e56;
+  }
+  .creditCardForm .payment {
+      float: left;
+      font-size: 18px;
+      padding: 10px 25px;
+      margin-top: 20px;
+      position: relative;
+  }
+  .creditCardForm .payment .form-group {
+      float: left;
+      margin-bottom: 15px;
+  }
+  .creditCardForm .payment .form-control {
+      line-height: 40px;
+      height: auto;
+      padding: 0 16px;
+  }
+  .creditCardForm .owner {
+      width: 63%;
+      margin-right: 10px;
+  }
+  .creditCardForm .CVV {
+      width: 35%;
+  }
+  .creditCardForm #card-number-field {
+      width: 100%;
+  }
+  .creditCardForm #expiration-date {
+      width: 49%;
+  }
+  .creditCardForm #credit_cards {
+      width: 50%;
+      margin-top: 25px;
+      text-align: right;
+  }
+  .creditCardForm #pay-now {
+      width: 100%;
+      margin-top: 25px;
+  }
+  .creditCardForm .payment .btn {
+      width: 100%;
+      margin-top: 3px;
+      font-size: 24px;
+      background-color: #2ec4a5;
+      color: white;
+  }
+  .creditCardForm .payment select {
+      padding: 10px;
+      margin-right: 15px;
+  }
+  .transparent {
+      opacity: 0.2;
+  }
+  @media(max-width: 650px) {
+      .creditCardForm .owner,
+      .creditCardForm .CVV,
+      .creditCardForm #expiration-date,
+      .creditCardForm #credit_cards {
+          width: 100%;
+      }
+      .creditCardForm #credit_cards {
+          text-align: left;
+      }
+  }

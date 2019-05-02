@@ -1,0 +1,60 @@
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+
+
+button#myButton.button(onclick="window.location.href='http://localhost:3000/payment'")
+iframe(src='https://www.crowdfundme.it/projects/aicube/', frameborder='0', scrolling='no')
+
+
+
+
+style.
+  iframe {
+      height:3454px;
+      width: 100%;
+      margin:0;
+      padding:0;
+          }
+
+  body{
+      margin: 0;
+      padding:0;
+      position:relative;
+  }
+
+  @media only screen and (max-width: 900px) {
+        .button{
+          background-color:transparent;
+          z-index: 200000;
+          position: absolute;
+          top:350px;
+          left: 320px;
+          height:78px;
+          width:246px;
+          border-width: none;
+          }
+          .button:hover{
+          cursor: pointer;
+      }
+          .button:focus {
+              outline:none;
+          }
+  }
+
+  @media only screen and (min-width: 901px) and (max-width: 10000px) {
+        .button{
+          background-color:transparent;
+          z-index: 200000;
+          position: absolute;
+          top:785px;
+
+          height:40px;
+          width:80%;
+          border-width: none;
+          }
+          .button:hover{
+          cursor: pointer;
+      }
+          .button:focus {
+              outline:none;
+          }
+  }
